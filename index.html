@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Birthday Cecilia 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f496.svg" class="loader-icon" alt="heart">
+  </div>
+  <p class="loader-text">Preparing something magical for you Cecilia…</p>
+</div>
+
+
+
+<!-- FLOATING HEARTS LAYER -->
+<div id="hearts-layer"></div>
+
+<!-- LANDING -->
+<div class="home">
+  <div class="bg-petals" id="petals"></div>
+
+  <div class="card">
+    <div class="card-glow"></div>
+
+    <p class="eyebrow">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg" alt="sparkle" class="icon-xs">
+      A gift from Jay, made with love
+    </p>
+
+    <div class="cake-wrap">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f382.svg" alt="birthday cake" class="cake-img">
+    </div>
+
+    <h1>Happy Birthday<br><em>Cecilia</em></h1>
+    <p class="subtitle">Today the whole world should celebrate you.</p>
+
+    <div class="buttons">
+      <button class="btn btn-rose" onclick="openWish()">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f381.svg" alt="gift" class="btn-icon">
+        <span>Birthday Wish</span>
+      </button>
+      <button class="btn btn-purple" onclick="openGallery()">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4f8.svg" alt="camera" class="btn-icon">
+        <span>Memories of you</span>
+      </button>
+      <button class="btn btn-gold" onclick="openLetter()">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f48c.svg" alt="letter" class="btn-icon">
+        <span>Special Letter</span>
+      </button>
+      <button class="btn btn-green" onclick="openVideo()">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3a5.svg" alt="video" class="btn-icon">
+        <span>Your favorite Video</span>
+      </button>
+      <button class="btn btn-blue btn-full" onclick="openTimeline()">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ab.svg" alt="stars" class="btn-icon">
+        <span>Our Story</span>
+      </button>
+      <button class="btn btn-pink btn-full" onclick="openQuiz()">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2753.svg" alt="question" class="btn-icon">
+        <span>How Well Do You Know Jay?</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ── WISH POPUP ─────────────────────────────── -->
+<div class="popup" id="wishPopup">
+  <div class="modal">
+    <button class="close-btn" onclick="closeAll()" aria-label="Close">✕</button>
+    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f381.svg" alt="gift" class="modal-icon-img">
+    <h2>Birthday Wish</h2>
+    <div class="modal-divider"></div>
+    <p class="modal-text">
+      Happy Birthday my love
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2764.svg" alt="heart" class="icon-inline"><br><br>
+      You are my happiness, my peace, and my greatest blessing.
+      I pray your life overflows with joy, success, and endless love.
+      I pray that this new year of your life is filled with peace, joy, good health, and open doors. May everything you touch be blessed, and may your heart always find happiness even in small things.<br><br>
+      I will always cherish and love you deeply.<br><br>
+      <strong>Happy Birthday, Cecilia.
+        <br>Jesus Loves you!!
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f339.svg" alt="rose" class="icon-inline"></strong>
+    </p>
+  </div>
+</div>
+
+<!-- ── GALLERY POPUP ──────────────────────────── -->
+<div class="popup" id="galleryPopup">
+  <div class="modal modal--wide">
+    <button class="close-btn" onclick="closeAll()" aria-label="Close">✕</button>
+    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4f8.svg" alt="camera" class="modal-icon-img">
+    <h2>Memories of you</h2>
+    <div class="modal-divider"></div>
+
+    <!-- LIGHTBOX GALLERY -->
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="g-item" onclick="openLightbox(0)"><img src="images/us1.jpg" alt="Memory 1"><div class="g-overlay"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50d.svg" alt="zoom" class="icon-sm"></div></div>
+      <div class="g-item" onclick="openLightbox(1)"><img src="images/us2.jpg" alt="Memory 2"><div class="g-overlay"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50d.svg" alt="zoom" class="icon-sm"></div></div>
+      <div class="g-item" onclick="openLightbox(2)"><img src="images/us3.jpg" alt="Memory 3"><div class="g-overlay"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50d.svg" alt="zoom" class="icon-sm"></div></div>
+      <div class="g-item" onclick="openLightbox(3)"><img src="images/us4.jpg" alt="Memory 4"><div class="g-overlay"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50d.svg" alt="zoom" class="icon-sm"></div></div>
+      <div class="g-item g-item--wide" onclick="openLightbox(4)"><img src="images/us5.jpg" alt="Memory 5"><div class="g-overlay"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50d.svg" alt="zoom" class="icon-sm"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-nav lb-prev" onclick="lbNav(-1,event)">&#8249;</button>
+  <img id="lbImg" src="" alt="Memory">
+  <button class="lb-nav lb-next" onclick="lbNav(1,event)">&#8250;</button>
+  <span class="lb-counter" id="lbCounter"></span>
+</div>
+
+<!-- ── LETTER POPUP ────────────────────────────── -->
+<div class="popup" id="letterPopup">
+  <div class="modal modal--letter">
+    <button class="close-btn" onclick="closeAll()" aria-label="Close">✕</button>
+    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f48c.svg" alt="letter" class="modal-icon-img">
+    <h2>Special Letter</h2>
+    <div class="modal-divider"></div>
+    <div class="letter-envelope">
+      <p class="modal-text letter-text" id="letterText"></p>
+      <span class="cursor" id="cursor">|</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── VIDEO POPUP ────────────────────────────── -->
+<div class="popup" id="videoPopup">
+  <div class="modal modal--wide">
+    <button class="close-btn" onclick="closeAll()" aria-label="Close">✕</button>
+    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3a5.svg" alt="video" class="modal-icon-img">
+    <h2>Your Favorite Video</h2>
+    <div class="modal-divider"></div>
+    <video id="birthdayVideo" controls>
+      <source src="videos/birthday-message.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+</div>
+
+<!-- ── TIMELINE POPUP ─────────────────────────── -->
+<div class="popup" id="timelinePopup">
+  <div class="modal modal--wide">
+    <button class="close-btn" onclick="closeAll()" aria-label="Close">✕</button>
+    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ab.svg" alt="stars" class="modal-icon-img">
+    <h2>Our Story</h2>
+    <div class="modal-divider"></div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f440.svg" alt="eyes" class="icon-sm"></div>
+        <div class="tl-content">
+          <h3>The First Glance</h3>
+          <p>The moment I saw you, everything else faded away. I knew you were someone special.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ac.svg" alt="chat" class="icon-sm"></div>
+        <div class="tl-content">
+          <h3>Our First Conversation</h3>
+          <p>We talked for hours like we had known each other forever. That was the beginning of everything.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f495.svg" alt="hearts" class="icon-sm"></div>
+        <div class="tl-content">
+          <h3>Falling in Love</h3>
+          <p>Every day with you made my heart fuller. I fell deeply and completely for you.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f382.svg" alt="cake" class="icon-sm"></div>
+        <div class="tl-content">
+          <h3>Today, Your Birthday</h3>
+          <p>Celebrating you today and every day. Here's to many more beautiful chapters together.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── QUIZ POPUP ──────────────────────────────── -->
+<div class="popup" id="quizPopup">
+  <div class="modal">
+    <button class="close-btn" onclick="closeAll()" aria-label="Close">✕</button>
+    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2753.svg" alt="question" class="modal-icon-img">
+    <h2>How Well Do You Know Jay?</h2>
+    <div class="modal-divider"></div>
+    <div id="quizContainer"></div>
+  </div>
+</div>
+
+
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
